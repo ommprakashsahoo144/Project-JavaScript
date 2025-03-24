@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <style>  
+        div#container {
+            width: 700px;
+            height: 200px;
+            border: 2px solid black; /* Fixed incorrect syntax */
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+
+        #clock {
+            text-align: center;
+            font-size: 4rem;
+        }
+
+        button {
+            font-size: 1rem;
+            margin: 5px;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="clock">
+            <span id="hr">00</span> :
+            <span id="min">00</span> :
+            <span id="sec">00</span> :
+            <span id="mSec">00</span>
+            <br>
+            <button id="start">Start</button>
+            <button id="stop">Stop</button>
+            <button id="clear">Clear</button>
+        </div>
+    </div>
+
+    <script>
+        let hrTag = document.getElementById('hr');
+        let minTag = document.getElementById('min');
+        let secTag = document.getElementById('sec');
+        let mSecTag = document.getElementById('mSec');
+        let startBtn = document.getElementById('start');
+        let stopBtn = document.getElementById('stop');
+        let clearBtn = document.getElementById('clear');
+
+        let hr = 0, min = 0, sec = 0, mSec = 0;
+        let id = null;
+
+        function display() {
+            hrTag.innerText = hr < 10 ? "0" + hr : hr;
+            minTag.innerText = min < 10 ? "0" + min : min;
+            secTag.innerText = sec < 10 ? "0" + sec : sec;
+            mSecTag.innerText = mSec < 10 ? "0" + mSec : mSec;
+        }
+        
+        display();
+
+        function start() {
+            if (id !== null) return; // Prevent multiple intervals
+            id = setInterval(() => {
+                mSec++;
+                if (mSec > 99) {
+                    mSec = 0;
+                    sec++;
+                }
+                if (sec > 59) {
+                    sec = 0;
+                    min++;
+                }
+                if (min > 59) {
+                    min = 0;
+                    hr++;
+                }
+                display();
+            }, 10);
+        }
+
+        function stop() {
+            clearInterval(id);
+            id = null;
+        }
+
+        function clear() {
+            stop();
+            hr = 0;
+            min = 0;
+            sec = 0;
+            mSec = 0;
+            display();
+        }
+
+        startBtn.addEventListener('click', start);
+        stopBtn.addEventListener('click', stop);
+        clearBtn.addEventListener('click', clear);
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <section>
+        <div class="row">
+            <div class="col-4 m-auto mt-4">
+                <div id="card" class="card">
+                    <div class="card-header bg-primary text-center  text-white">
+                    </div>
+                    <div class="card-body">
+                        <div id="task-form">
+                            <div class="input-group-text mb-3" >
+                                <input type="text" class="form-control" placeholder="Enter The Text" id="task-input" >
+                            </div>
+                            <div class="input-group mb-3">
+                                <!-- <input type="submit" class="btn btn-success"> -->
+                                 <button id="btn">submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+   <script>
+    let taskFrom=document.getElementById("task-input");
+    let bgcolor=document.getElementById('card');
+    let btn=document.getElementById('btn');
+
+    let str=[0,1,2,3,4,5,6,7,8,9,"a","b","c","d","e","f"];
+    
+    
+    btn.addEventListener('click', function(e){
+        let newStr="#";
+        
+        for(let i=0;i<6;i++){
+            let color=Math.floor(Math.random(str)*16);
+            let newArr=str[color];
+            console.log(newArr);
+            newStr+=newArr;
+            console.log(newStr);
+            taskFrom.value=newStr;
+
+             bgcolor.style.backgroundColor=taskFrom.value;
+           
+        }
+
+    }) 
+    
+
+   </script>
+</body>
+</html>

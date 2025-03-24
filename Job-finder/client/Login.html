@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Login Form</title>
+    <style>
+        /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+
+body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.login-box {
+    background: rgb(197, 168, 168);
+    border: 1px solid rgb(156, 194, 215);
+    border-radius: 12px;
+    padding: 30px 40px;
+    width: 320px;
+    text-align: center;
+    color:black;
+}
+
+/* Header */
+.login-header {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+.input-field {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+}
+
+.input-field .icon {
+    color:black;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.input-field input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: black;
+    font-size: 14px;
+}
+
+.input-field input::placeholder {
+    color:black;
+}
+
+/* Options */
+.options {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.options a {
+    color: black;
+    text-decoration: none;
+}
+
+.options a:hover {
+    text-decoration: underline;
+}
+
+/* Login Button */
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 8px;
+    color: #333;
+    
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #ddd;
+}
+
+/* Register Link */
+.register-text {
+    margin-top: 15px;
+    font-size: 12px;
+}
+
+.register-text a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.register-text a:hover {
+    text-decoration: underline;
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="background">
+        
+        <div class="login-box">
+            <!-- Header -->
+            <div class="login-header"> <a href="JobFinder.html">Login</a></div>
+
+            <!-- Input Fields -->
+            <form>
+                <div class="input-field">
+                    <span class="icon">&#x1F464;</span>
+                    <input type="text" placeholder="Username" required>
+                </div>
+                <div class="input-field">
+                    <span class="icon">&#x1F512;</span>
+                    <input type="password" placeholder="Password" required>
+                </div>
+
+                <!-- Options -->
+                <div class="options">
+                    <label>
+                        <input type="checkbox"> Remember me
+                    </label>
+                    <a href="#" class="forgot">Forgot password?</a>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="login-btn"> <a href="JobFinder.html">Login</a></button>
+
+                <!-- Register Link -->
+                <p class="register-text">
+                    Don’t have an account? <a href="Register.html">Register</a>
+                </p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

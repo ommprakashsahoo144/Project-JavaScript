@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Website UI</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header class="header">
+    <div class="logo"><a href="JobFinder.html">JobFinder</a></div>
+    <nav class="nav">
+      <a href="#jobs">Jobs</a>
+      <a href="#boost">Boost</a>
+      <a href="#prep">Prep</a>
+      <a href="#learn">Learn</a>
+      <a href="#career-advice">Career Advice</a>
+      <a href="#career-fair">Career Fair</a>
+    </nav>
+    <div class="header-buttons">
+     <a href="Login.html"><button class="login" onclick="openLoginModal()">Login</button></a>
+      <a href="Register.html"><button class="register" onclick="openRegisterModal()">Register</button></a>
+    </div>
+  </header>
+  <!--  Search Section -->
+<section class="search-section">
+    <h1>Over 7,00,000+ jobs to explore</h1>
+    <div class="search-bar">
+      <select class="search-select" id="job-type">
+        <option value="" disabled selected>Select Job Type</option>
+        <option value="fulltime">Full Time</option>
+        <option value="parttime">Part Time</option>
+        <option value="fullstack">Full Stack</option>
+        <option value="frontend">Frontend</option>
+        <option value="backend">Backend</option>
+      </select>
+      <select class="search-select" id="location">
+        <option value="" disabled selected>Select Location</option>
+        <option value="bangalore">Bangalore</option>
+        <option value="hyderabad">Hyderabad</option>
+        <option value="pune">Pune</option>
+        <option value="mumbai">Mumbai</option>
+        <option value="delhi">Delhi</option>
+      </select>
+      <select class="search-select" id="experience">
+        <option value="" disabled selected>Select Experience</option>
+        <option value="0-1">0-1 years</option>
+        <option value="1-2">1-2 years</option>
+        <option value="3-4">3-4 years</option>
+        <option value="5+">5+ years</option>
+      </select>
+      <button class="search-button">Search</button>
+    </div>
+  </section>
+  
+
+ 
+
+  <!-- Feature Section -->
+  <section class="features">
+    <div class="feature1">
+      <div class="icon">🚀</div>
+      <h2>Boost</h2>
+      <p>Stand out to employers</p>
+    </div>
+    <div class="feature2">
+      <div class="icon">📘</div>
+      <h2>Prep</h2>
+      <p>Up your interview success rate</p>
+    </div>
+    <div class="feature3">
+      <div class="icon">🎓</div>
+      <h2>Learn</h2>
+      <p>Upskill to get ahead</p>
+    </div>
+    <div class="feature4">
+      <div class="icon">👥</div>
+      <h2>Network</h2>
+      <p>Grow with peers & mentors</p>
+    </div>
+  </section>
+  <div class="container">
+    <section class="featured-companies">
+        <h2>Featured Companies</h2>
+        <div class="company-logos">
+            <img src="google.png" alt="Company 1">
+            <img src="happy.png" alt="Company 2">
+            <img src="infosys.png" alt="Company 3">
+            <img src="microsoft.png" alt="Company 4">
+            <img src="mindtree.png" alt="Company 5">
+        </div>
+    </section>
+
+    <section class="popular-categories">
+        <h2>Popular Categories</h2>
+        <div class="categories">
+            <div class="category">
+                <i class="fas fa-university"></i>
+                <span>Banking</span>
+            </div>
+            <div class="category">
+                <i class="fas fa-house-user"></i>
+                <span>Work From Home</span>
+            </div>
+            <div class="category">
+                <i class="fas fa-user-tie"></i>
+                <span>HR</span>
+            </div>
+            <div class="category">
+                <i class="fas fa-briefcase"></i>
+                <span>Sales</span>
+            </div>
+            <div class="category">
+                <i class="fas fa-calculator"></i>
+                <span>Accounting</span>
+            </div>
+            <div class="category">
+                <i class="fas fa-headset"></i>
+                <span>Customer Support</span>
+            </div>
+            <div class="category">
+                <i class="fas fa-calendar-alt"></i>
+                <span>Event Management</span>
+            </div>
+            <div class="category">
+                <i class="fas fa-laptop-code"></i>
+                <span>IT</span>
+            </div>
+            <div class="category">
+                <i class="fas fa-database"></i>
+                <span>SQL</span>
+            </div>
+            <div class="category">
+                <i class="fas fa-code"></i>
+                <span>Oracle</span>
+            </div>
+            <div class="category">
+                <i class="fas fa-palette"></i>
+                <span>Graphic Design</span>
+            </div>
+            <div class="category">
+                <i class="fas fa-bullhorn"></i>
+                <span>Digital Marketing</span>
+            </div>
+        </div>
+    </section>
+</div>
+<footer class="footer">
+  <div class="footer-container">
+      <div class="footer-left">
+          <ul class="footer-links">
+              <li><a href="#">Job Categories</a></li>
+              <li><a href="#">Employers</a></li>
+              <li><a href="#">Job Seekers</a></li>
+              <li><a href="#">Career Advice</a></li>
+              <li><a href="#">Company Info</a></li>
+              <li><a href="#">IT Jobs</a></li>
+              <li><a href="#">Non IT Jobs</a></li>
+              <li><a href="#">Partnerships</a></li>
+          </ul>
+      </div>
+      <div class="footer-right">
+          <div class="footer-contact">
+              <label for="country-select">Selected Country</label>
+              <select id="country-select">
+                  <option value="India">India</option>
+                  <option value="USA">USA</option>
+                  <option value="UK">UK</option>
+              </select>
+              <p>
+                  <i class="fas fa-phone"></i> Toll No: +91 80 6985 7811 | Toll Free No: 1800-419-6666
+              </p>
+              <p>
+                  <i class="fas fa-envelope"></i> info@JobFinder.in
+              </p>
+          </div>
+          <div class="footer-apps">
+              <p>Download The App</p>
+              <div class="app-links">
+                  <img src="https://via.placeholder.com/120x40" alt="App Store">
+                  <img src="https://via.placeholder.com/120x40" alt="Google Play">
+              </div>
+          </div>
+          <div class="footer-social">
+              <p>Stay Connected</p>
+              <div class="social-icons">
+                  <a href="#"><i class="fab fa-facebook"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-linkedin"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-youtube"></i></a>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="footer-bottom">
+      <p>
+          <a href="#">Security & Fraud</a> | 
+          <a href="#">Privacy Policy</a> | 
+          <a href="#">Terms of Use</a> | 
+          <a href="#">Beware of Fraudsters</a> | 
+          <a href="#">Be Safe</a> | 
+          <a href="#">Complaints</a>
+      </p>
+      <p>© 2024 JobFinder | All rights Reserved</p>
+  </div>
+</footer>
+
+
+   
+  <script src="script.js"></script>
+</body>
+</html>

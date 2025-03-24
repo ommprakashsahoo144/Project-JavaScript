@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div#container{
+            width: 700px;
+            height: 200px;
+            border: 2px, solid black;
+            position: relative;
+        }
+
+
+        #clock{
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            font-size: 4rem;
+            position: absolute;
+        }
+       
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="clock">
+            <span id="hr"></span><span>:</span><span id="min"></span><span>:</span><span id="sec"></span>
+        </div>
+    </div>
+
+    <script>
+        let hrTag=document.getElementById('hr');
+        let minTag=document.getElementById('min');
+        let secTag=document.getElementById('sec');
+
+
+
+        let hr,min,sec;
+
+        setInterval(()=>{
+            getTime();
+
+        },1000);
+
+
+        function getTime(){
+            let date=new Date();
+            hr=date.getHours();
+            min=date.getMinutes();
+            sec=date.getSeconds();
+
+            display();
+        }
+
+        function display(){
+            hr<10? hrTag.innerText="0"+hr: hrTag.innerText=hr;
+            min<10? minTag.innerText="0"+min: minTag.innerText=min;
+            sec<10? secTag.innerText="0"+sec: secTag.innerText=sec;
+            
+
+        }
+
+        getTime();
+    </script>
+</body>
+</html>
